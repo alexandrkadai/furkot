@@ -1,0 +1,780 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
+:root{
+    /* Colors*/
+   --c-first: #f8ffd6;
+    /*--c-first:#fcffeb;*/
+    --c-accent:#bc4b51;
+    --c-accdark:#214e34;
+    --c-accdd:#3C1518;
+
+    /* Typography and fonts */
+    --header-height: 3rem;
+    --body-font: "Cabin Condensed", sans-serif;
+    --notable-font: "Notable", sans-serif;
+    --h1-font: 1.5rem;
+    --h2-font: 1.25rem;
+    --h3-font: 1.125rem;
+    --big-font: 2.5rem;
+    --normal-font: .938rem;
+    --smal-font: .812rem;
+    --smallest-font: .75rem;
+
+    /* Font wiegth*/
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+
+    /*Margins*/
+    --mg1: 0.5rem;
+    --mg2: 1rem;
+    --mg3: 1.5rem;
+    --mg4: 2rem;
+    --mg5: 2.5rem;
+    --mg6: 3rem;
+
+    /*Z index*/
+    --z-normal:1;
+    --z-tootip:10;
+    --z-fix:100;
+
+}
+
+/* Base */
+*,::before,::after{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    min-width: 320px;
+    margin: 0;
+    font-size: var(--normal-font);
+    font-family: var(--body-font);
+    background-image: url('/asset/img/background.png');
+    font-weight: var(--font-medium);
+    line-height: 1.6;
+    color:var(--c-accdd);
+}
+nav{
+    margin:0;
+    padding: 0;
+}
+h1,h2,h3,ul,p{
+    margin: 0;
+}
+
+h2,h3{
+    font-weight: var(--font-semibold);
+}
+
+ul{
+    padding: 0;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width:100%;
+    height: auto;
+    display: block;
+}
+
+.section{
+    padding:4rem 0 2 rem;
+}
+
+/*----------------------------------------------------*/
+ /* Header, Navigation First section*/
+#icon-menu{
+     display: block;
+     z-index: 1;
+     position: fixed;
+     top: 35px;
+     right: 25px;
+     width: 50px;
+     height: 3px;
+     background:black;
+     box-shadow: 2px 2px 2px;
+     cursor:pointer;
+    
+ }
+
+#icon-menu:before{
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    top:16px;
+    content: "";
+    background: black;
+    box-shadow: 2px 2px 2px;
+} 
+
+#icon-menu:after{
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    top: -16px;
+    content: "";
+    background: black;
+    box-shadow: 2px 2px 2px;
+} 
+
+#first-sec{
+     height: auto;
+     align-content: center;
+}
+
+#head{
+    width: 100%;
+}
+
+#logo{
+    margin: 50px auto 0 auto;
+    height: 75px;
+    width: 200px;
+}
+
+#navig{
+    position:fixed;
+    top:0px;
+    width: 100%;
+    height: 100vh;
+    font-size: var(--normal-font);
+    background-color: cadetblue;
+    display: flex; /* DISPLAY MENU */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left:-100%;
+    transition: all 200ms ease-in-out;
+}
+
+#navig ul li{
+    display: block;
+    margin-top: 20px;
+    border: 2px solid black;
+    padding :5px;
+    width: 150px;
+    text-align: center;
+    text-transform: uppercase;
+    box-shadow: 3px 3px 0 black;
+}
+#navi-separator{
+    margin-top: 40px;
+    display: block;
+    position: relative;
+    height: 6px;
+    width: 50px;
+    transform: rotate(45deg);
+    background-color: black;
+}
+#soc-wrapper{
+    margin-top: 25px;
+}
+
+#soc-wrapper li{
+    padding-top: 5px;
+    text-transform: uppercase;
+    display: inline-block;
+    color:var(--c-accdd);
+}
+
+#front-wrapper{
+    margin: 50px auto 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#front-text{
+    display: inline-block;
+    font-family:  var(--notable-font);
+    letter-spacing: 5px;
+    width: 100%;
+    font-size: 35px;
+    color:black;
+    border-bottom: 4px solid var(--c-accent);
+    border-top: 4px solid var(--c-accent);
+}
+
+#text-second{
+    font-size: 25px;
+    color:var(--c-accent);
+    font-family:  var(--notable-font);
+}
+
+#design-dekstop{
+    display:none;
+}
+
+#design-mobile{
+ border-bottom: 2px var(--c-accent) ;
+}
+
+#photo-wraper{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    overflow: hidden;
+}
+
+.card-text{
+    position: relative;
+    color:#bc4b51;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 2px 2px black;
+    font-size: 30px;
+    top:100px;
+    left:75px;
+}
+.card-wraper{
+    z-index: 1;
+    margin-right: 45px;
+}
+/* Second Section -- Offer  */
+
+#offer{
+    height: auto;
+    text-align: center;
+    width: 100%;
+}
+
+#offer-title{
+    margin-top: 100px;
+    font-size: 40px;
+    color:var(--c-accent);
+    text-transform: uppercase;
+}
+
+#offer-title span{
+    color:black;
+}
+
+#offer-design{
+display: none;
+}
+
+#offer-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    margin-top: 50px;
+    padding-bottom: 30px;
+}
+
+.offer-card{
+    margin-top: 30px;
+    text-transform: uppercase;
+    font-size: var(--smal-font);
+    text-align: center;
+    border: 2px solid black;
+    height: auto;
+    width: 280px;
+    box-shadow: 10px 10px 0 black;
+}
+
+.offer-card span{
+    margin-top: 40px;
+    display: block;
+    font-size: 40px;
+    text-align: center;
+}
+
+.offer-card img{
+    margin: 30px auto 0 auto;
+    height: 140px;
+    width: 140px;
+    border: 3px solid var(--c-accdark);
+}
+
+.offer-card p{
+    margin-top:20px;
+}
+/*Menu Section -- Poznaj Nasze Meni */
+#menu{
+    height:auto;
+    text-align: center;
+}
+
+#menu-card h2{
+    text-transform: uppercase;
+    font-size: var(--big-font);
+    color: black;
+}
+
+#menu-card span{
+    display: block;
+    width: 200px;
+    margin: 0 auto 0 auto;
+    position: relative;
+    top: -60px;
+    background-color: var(--c-first);
+    padding: 5px;
+    text-transform: uppercase;
+    color: black;
+    font-size: var(--h1-font);
+    border: 5px solid black;
+    box-shadow: 5px 5px 0 black;
+}
+
+/* Dla grup Section */
+#event{
+    height: auto;
+    color: black;
+    padding-bottom:50px;
+}
+
+#event-wrap{
+    display: flex;
+    flex-direction: column;
+}
+
+#event-card-1{
+    width:100%;
+    height:50vh;
+    background-image: url("/asset/img/impreza.png");
+    background-position: center;
+    background-size: cover;
+}
+
+#event-card-2{
+    width: 100%;
+    text-align: center;
+    margin-top:-50px;
+    align-items: center;
+    overflow: hidden;
+}
+
+#event-card-2 h2{
+    font-size: var(--big-font);
+    text-transform: capitalize;
+    }
+
+/*#red-line{
+    display: block;
+    width: 105%;
+    margin-left: 40px;
+    height: auto;
+    border: 2px solid red;
+}
+*/
+
+#event-card-2 p{
+    margin-top: 50px;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: var(--h1-font) ;
+}
+
+/* Dostawa Section*/
+#delivery{
+    height: auto;
+    padding-bottom:50px;
+}
+
+#delivery-wrap{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.delivery-card{
+    width: 100%;
+    overflow: hidden;
+}
+
+#delivery-card-1{
+    width: 100%;
+    margin-top: -75px;
+    color: black;
+    text-align: center;
+    z-index: 1;
+}
+
+#delivery-card-1 h2{
+    font-size: var(--big-font);
+    text-transform: capitalize;
+}
+
+#delivery-card-1 p{
+    margin-top: 50px;
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: var(--h1-font) ;
+}
+
+#delivery-card-2{
+    width: 100%;
+    height: 50vh;
+    background-image: url("/asset/img/dostawa.png");
+
+}
+
+/* Footer Map and Contacs  */
+footer{
+    height: auto;
+}
+
+#footer-wrap{
+    display: flex;
+    justify-content: stretch;
+    flex-direction: column-reverse;
+    
+}
+
+#map{
+    width: 100%;
+    height: 100%;
+}
+
+#real-map{
+    width: 100%;
+}
+
+#contacts{
+    text-align: center;
+    color : black;
+    color: var(--c-accdark);
+    width: 100%;
+}
+#contacts img{
+    margin: 55px auto 0 auto;
+    width: 250px;
+    height: 150px;
+}
+#contacts span{
+    display: block;
+    margin-top: 125px;
+    text-transform: capitalize;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+
+/* Media queries Tablet mode */
+@media screen and (min-width:768px){
+    :root{
+    --h1-font: 2.25rem;
+    --h2-font: 1.5rem;
+    --h3-font: 1.25rem;
+    --big-font: 4.5rem;
+    --normal-font: 1rem;
+    --smal-font: .875rem;
+    --smallest-font: .813rem;
+}
+} 
+
+
+/* Media Query Desktop Mode*/
+@media screen and (min-width:1022px){
+/* First Sectoion Nav & Header*/
+#icon-menu{
+    display: none;
+}
+
+#logo{
+    margin: 40px auto 0 auto;
+    height: 50px;
+    width: 125px;
+}
+
+#navig{
+    margin-top: 30px;
+    position: relative;
+    display: flex;
+    width: auto;
+    background: rgba(0,0,0,0.0);
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    left:0;
+ }
+
+ #navig ul li{
+    display: inline-block;
+    margin-top: 20px;
+    border: 2px solid black;
+    padding :5px;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    box-shadow: 3px 3px 0 black;
+    font-size: 12px;
+    margin-right: 20px;
+}
+
+ #navig-main{
+    text-align: center;
+}
+
+#navi-separator{
+    display: none;
+}
+
+#soc-wrapper{
+margin-top: 0px;
+}
+
+#soc-wrapper:before{
+    content: "";
+    display: inline-block;
+    position: relative;
+    width: 35px;
+    height: 3px;
+    background-color: black;
+    transform: rotate(-45deg);
+    right:5px;
+}
+
+#soc-wrapper li{
+    text-transform: uppercase;
+    padding-top: 5px;
+    color:var(--c-accdd);
+    display: inline-block;
+}
+    
+#front-text{
+    font-size: 100px;
+ }
+
+#text-second{
+    display: block;
+    margin-top:-35px;
+    font-size: 50px;
+    padding-bottom: 20px;
+}
+
+/*#design-dekstop{
+    display:none;
+    margin-right: 0;
+    z-index: 0;
+    position: absolute;
+    bottom: -90px;
+    width: 100%;
+    height: 65px;
+    display: block;
+    border-bottom: 4px solid var(--c-accent);
+    border-top: 4px solid var(--c-accent);
+}
+*/
+#photo-wraper{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.card-text{
+    position: relative;
+    color:#bc4b51;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 2px 2px black;
+    font-size: 30px;
+    top:120px;
+    left:30px;
+}
+
+#photo-wraper:before{
+    content: "";
+    display:block;
+    position: absolute;
+    width: 100%;
+    height: 65px;
+    top: 614px;
+    z-index: 0;
+    border-bottom: 4px solid var(--c-accent);
+    border-top: 4px solid var(--c-accent);
+
+}
+
+/*Section Offer Desktop -- Second Section */
+#offer{
+    margin: 0;
+    height: auto;
+}
+
+#offer-title{
+    font-size: var(--big-font);
+}
+
+#offer-wrap{
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    z-index: 10;
+}
+
+#offer-design{
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 1300px;
+    width: 100%;
+    height: 215px;
+    border-top: 4px solid var(--c-accent);
+    border-bottom: 4px solid var(--c-accent);
+}
+
+.offer-card{
+    height: auto;
+    width: 280px;
+    padding-bottom: 30px;
+    font-weight: bold;
+}
+
+.offer-card span{
+    font-size: 40px;
+}
+
+.offer-card img{
+    height: 200px;
+    width: 180px;
+    border: 3px solid black;
+}
+
+/*Menu Section -- Poznaj Nasze Meni */
+
+#menu{
+    height:auto;
+   
+}
+#menu-card h2{
+    font-size: 300px;
+}
+
+/* Dla grup Section */
+
+#event{
+    height: 100vh;
+}
+
+#event-wrap{
+    flex-direction: row;
+}
+
+.event-card{
+    width: 100vh;
+    height: 100vh;
+}
+
+#event-card-1{
+    width: 100%;
+    height: 100vh;
+}
+
+#event-card-2{
+    margin-top:50px;
+}
+
+#event-card-2 h2{
+    margin-top: 0px;
+    margin-right: 15%;
+}
+
+#red-line-event{
+    display: block;
+    width: 105%;
+    margin-left: 40px;
+    height: auto;
+    border: 4px solid var(--c-accent);
+}
+
+/*#event-card-2 p{
+    margin-top: 50px;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: var(--h1-font) ;
+}*/
+
+/* Dostawa Section*/
+#delivery{
+    height: 100vh;
+}
+
+#delivery-wrap{
+    flex-direction: row;
+    justify-content: stretch;
+}
+
+.delivery-card{
+    width: 100%;
+    height: 100vh;
+}
+
+#delivery-card-1{
+    width: 100%;
+    color: black;
+    text-align: center;
+    margin-top: 0px;
+}
+
+#delivery-card-1 h2{
+    font-size: var(--big-font);
+    margin-left:150px;
+    text-transform: capitalize;
+}
+
+#red-line-delivery{
+    text-align: center;
+    margin-top: 20px;
+    display: block;
+    position: relative;
+    width: 105%;
+    height: auto;
+    border: 4px solid var(--c-accent);
+    right: 130px;
+}
+
+
+#delivery-card-1 p{
+    margin-top: 50px;
+    width: 450px;
+    display: block;
+}
+
+#delivery-card-2{
+   height: 100vh;
+}
+
+/* Footer Map and Contacs  */
+footer{
+    height: 50vh;
+}
+
+#footer-wrap{
+    flex-direction: row;
+    
+}
+
+#contacts img{
+    margin: 55px auto 0 auto;
+    width: 250px;
+    height: 150px;
+}
+#contacts span{
+ padding-bottom: 0px;
+}
+
+
+
+
+/* Media End -------------------*/
+}
