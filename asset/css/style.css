@@ -284,6 +284,8 @@ display: none;
     height: auto;
     width: 280px;
     box-shadow: 10px 10px 0 black;
+    background-color: #e9ebde;
+    
 }
 
 .offer-card span{
@@ -309,6 +311,10 @@ display: none;
     text-align: center;
 }
 
+#menu-wrap{
+    z-index: 1;
+}
+
 #menu-card h2{
     text-transform: uppercase;
     font-size: var(--big-font);
@@ -329,6 +335,51 @@ display: none;
     border: 5px solid black;
     box-shadow: 5px 5px 0 black;
 }
+
+/* Zaobacz Nasze propozycji */
+#purpose{
+    width: 100%;
+}
+
+#offer-design{
+    display: none;
+    position: absolute;
+    z-index: -1;
+    top: 1300px;
+    width: 100%;
+    height: 215px;
+    border-top: 4px solid var(--c-accent);
+    border-bottom: 4px solid var(--c-accent);
+}
+
+#purpose-wrap{
+    text-align: center;
+    min-width: 750px;
+    height: auto;
+    text-transform: uppercase;
+    background-color: #e9ebde;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid black;
+    height: auto;
+    box-shadow: 10px 10px 0 black;
+}
+
+#purpose-wrap h2{
+    font-size: 36px;
+}
+
+#purpose-text1{
+    font-size: 16px;
+}
+
+#purpose-text2{
+    font-size: 24px;
+}
+
+
+
 
 /* Dla grup Section */
 #event{
@@ -610,20 +661,24 @@ margin-top: 0px;
 }
 
 #offer-title{
-    font-size: var(--big-font);
+    font-size: 100px;
+}
+
+#offer-title span{
+    font-size: 70px;
 }
 
 #offer-wrap{
     justify-content: space-around;
     display: flex;
     flex-direction: row;
-    z-index: 10;
+    z-index: 1;
 }
 
 #offer-design{
     display: block;
     position: absolute;
-    z-index: 1;
+    z-index: -1;
     top: 1300px;
     width: 100%;
     height: 215px;
@@ -636,6 +691,7 @@ margin-top: 0px;
     width: 280px;
     padding-bottom: 30px;
     font-weight: bold;
+    z-index: 1;
 }
 
 .offer-card span{
@@ -652,11 +708,66 @@ margin-top: 0px;
 
 #menu{
     height:auto;
+    margin-bottom: 30px;
    
 }
+
+#menu-design{
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 1940px;
+    width: 100%;
+    height: 100px;
+    border-top: 4px solid var(--c-accent);
+    border-bottom: 4px solid var(--c-accent);
+}
+
 #menu-card h2{
     font-size: 300px;
 }
+
+/* Zaobacz Nasze propozycji */
+#purpose{
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+#purpose-design{
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 2400px;
+    width: 100%;
+    height: 215px;
+    border-top: 4px solid var(--c-accent);
+    border-bottom: 4px solid var(--c-accent);
+}
+
+#purpose-wrap{
+    width: 750px;
+    z-index: 1;
+}
+
+#purpose-text{
+    font-size: 132px;
+    
+}
+
+#purpose-text1{
+    display: block;
+    font-size: 60px;
+    margin-top: -70px;
+}
+
+#purpose-text2{
+    display: block;
+    font-size: 82px;
+    margin-top: -70px;
+   
+}
+
+
 
 /* Dla grup Section */
 
