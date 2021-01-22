@@ -78,6 +78,7 @@ ul{
 
 a{
     text-decoration: none;
+    color: black;
 }
 
 img{
@@ -396,9 +397,10 @@ display: none;
 #event-card-1{
     width:100%;
     height:50vh;
-    background-image: url("/asset/img/impreza.png");
+    background-image: url("/asset/img/impreza.jpg");
     background-position: center;
     background-size: cover;
+    border: 4px solid black;
 }
 
 #event-card-2{
@@ -473,8 +475,10 @@ display: none;
 #delivery-card-2{
     width: 100%;
     height: 50vh;
-    background-image: url("/asset/img/dostawa.png");
-
+    background-image: url("/asset/img/dostawa.jpg");
+    background-position: center;
+    background-position-x: -150%;
+    border: 4px solid black;
 }
 
 /* Footer Map and Contacs  */
@@ -504,17 +508,46 @@ footer{
     color: var(--c-accdark);
     width: 100%;
 }
-#contacts img{
-    margin: 55px auto 0 auto;
-    width: 250px;
+
+#contacs-design{
+    display: block;
+    position: absolute;
+    width: 300px;
     height: 150px;
+    border: 4px solid var(--c-accent);
+
 }
+
 #contacts span{
     display: block;
-    margin-top: 125px;
     text-transform: capitalize;
     font-weight: bold;
     padding-bottom: 30px;
+}
+
+#contacs-addres{
+    font-size: 32px;
+    margin-top: 90px;
+}
+
+#contacs-number{
+    font-size: 32px;
+}
+
+#contacs-hours-wrap{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.contacs-hours{
+    font-size: 28px;
+}
+
+.contacs-hours:last-child{
+    margin-left: 20px;
+
 }
 
 /* Media queries Tablet mode */
@@ -875,6 +908,14 @@ footer{
     
 }
 
+#contacs-design{
+    margin-top: 150px;
+    width: 300px;
+    height: 150px;
+    margin-left: 13%;
+
+}
+
 #contacts img{
     margin: 55px auto 0 auto;
     width: 250px;
@@ -884,6 +925,20 @@ footer{
  padding-bottom: 0px;
 }
 
+#contacs-addres{
+    font-size: 32px;
+    margin-top: 90px;
+}
+
+#contacs-number{
+    font-size: 32px;
+    text-decoration: none;
+    color: black;
+}
+
+#contacs-hours{
+    font-size: 28px;
+}
 
 
 
