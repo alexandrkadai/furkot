@@ -353,9 +353,9 @@ display: none;
 
 #menu-card span{
     display: block;
-    top: 30px;
     width: 200px;
-    margin: 0 auto 0 auto;
+    height: 45;
+    margin: -70px auto 0 auto;
     position: relative;
     background-color: var(--c-first);
     padding: 5px;
@@ -758,11 +758,13 @@ margin-top: 0px;
 }
 
 #offer-title{
-    font-size: 100px;
+    font-size: 135px;
 }
 
 #offer-title span{
-    font-size: 70px;
+    display: block;
+    margin-top: -50px;
+    font-size: 100px;
 }
 
 #offer-wrap{
