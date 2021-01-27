@@ -88,7 +88,7 @@ img{
 }
 
 .section{
-    padding:4rem 0 2 rem;
+    padding:4rem 0 2rem;
 }
 
 /*----------------------------------------------------*/
@@ -599,8 +599,113 @@ footer{
     --smallest-font: .813rem;
 }
 
+#front-text{
+    font-size: 80px;
+    letter-spacing: 1px;
 }
 
+#text-second{
+    display: block;
+    margin-top:-30px;
+    font-size: 30px;
+}
+
+#photo-wraper{
+    margin-top: 50px;
+    flex-wrap: nowrap;
+   
+}
+
+#design-mobile{
+    display: none;
+}
+
+.card-wraper img{
+    width: 120px;
+    height: 120px;
+}
+
+/* OFFER SECTION*/
+#offer-title{
+    font-size: 90px;
+}
+
+#offer-design{
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 1100px;
+    width: 100%;
+    height: 215px;
+    border-top: 4px solid var(--c-accent);
+    border-bottom: 4px solid var(--c-accent);
+}
+
+#offer-title span{
+    font-size: 67px;
+}
+
+#offer-wrap{
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.offer-card{
+    width: 200px;
+    height: 450px;
+}
+
+#menu-card h2{
+    font-size: 200px;
+}
+
+#menu-card span{
+    width: 94px;
+    height: 31px;
+    font-size: 12px;
+    padding:0px;
+}
+
+#menu-design{
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 1721px;
+    width: 100%;
+    height: 60px;
+    border-top: 4px solid var(--c-accent);
+    border-bottom: 4px solid var(--c-accent);
+}
+
+#purpose-design{
+    display: block;
+    top: 2060px;
+    height: 150px;
+}
+
+#purpose-wrap{
+    width: 445px;
+    height: 225px;
+}
+
+#purpose-text{
+    font-size: 85px;
+}
+
+#purpose-text1{
+    font-size: 43px;
+    display: block;
+    margin-top: -40px;
+}
+
+#purpose-text2{
+    font-size: 55px;
+    display: block;
+    margin-top: -50px;
+}
+
+/*  ENNNNNNDDDDDD TABLET MODE */
+}
 
 /* Media Query Desktop Mode*/
 @media screen and (min-width:1022px){
@@ -776,13 +881,7 @@ margin-top: 0px;
 
 #offer-design{
     display: block;
-    position: absolute;
-    z-index: -1;
     top: 1300px;
-    width: 100%;
-    height: 215px;
-    border-top: 4px solid var(--c-accent);
-    border-bottom: 4px solid var(--c-accent);
 }
 
 .offer-card{
@@ -813,13 +912,7 @@ margin-top: 0px;
 
 #menu-design{
     display: block;
-    position: absolute;
-    z-index: -1;
     top: 2050px;
-    width: 100%;
-    height: 100px;
-    border-top: 4px solid var(--c-accent);
-    border-bottom: 4px solid var(--c-accent);
 }
 
 #menu-card h2{
@@ -833,13 +926,8 @@ margin-top: 0px;
 
 #purpose-design{
     display: block;
-    position: absolute;
-    z-index: -1;
     top: 2620px;
-    width: 100%;
     height: 215px;
-    border-top: 4px solid var(--c-accent);
-    border-bottom: 4px solid var(--c-accent);
 }
 
 #purpose-wrap{
