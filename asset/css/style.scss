@@ -541,7 +541,9 @@ img {
   background-size: cover;
   border: 4px solid black;
 }
-
+.event__letter {
+  color: #bc4b51;
+}
 /* Footer Map and Contacs  */
 footer {
   height: auto;
@@ -685,10 +687,12 @@ footer {
   }
 
   #menu-card span {
-    width: 94px;
-    height: 31px;
+    width: 250px;
+    height: 50px;
     font-size: 12px;
     padding: 0px;
+    font-size: 30px;
+    margin-top: -80px;
   }
 
   #menu-design {
